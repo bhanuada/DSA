@@ -1,0 +1,30 @@
+package dsa1;
+
+import java.util.PriorityQueue;
+
+public class Findkthlargesteleemntinarray {
+
+	public static int findkthlargest(int[] arr, int k) {
+		
+		PriorityQueue<Integer> pq=new PriorityQueue<Integer>();
+		for(int nums: arr) {
+			
+			pq.offer(nums);
+			if(pq.size()>k) {
+				pq.poll();
+				
+			}
+		}
+		return pq.peek();
+		
+	}
+	public static void main(String[] args) {
+
+		
+		int arr[]= {2,4,5,1,3,6,9,7};
+		int kthlargest= findkthlargest(arr,2);
+		System.out.println(kthlargest);
+		
+}
+
+}
