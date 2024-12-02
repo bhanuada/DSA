@@ -1,0 +1,32 @@
+package dsa1;
+
+import java.util.*;
+
+public class Firstnonrepeatingcharecterstring {
+
+	public static int firstnonrepeatingcharecetr(String s) {
+
+		Map<Character, Integer> m2 = new HashMap<Character, Integer>();
+		for (char ch : s.toCharArray()) {
+
+			m2.put(ch, m2.getOrDefault(ch, 0) + 1);
+
+		}
+		for (int i = 0; i < s.length(); i++) {
+			if (m2.get(s.charAt(i)) == 1) {
+
+				return i;
+
+			}
+
+		}
+		return -1;
+
+	}
+
+	public static void main(String[] args) {
+		String s = "welcometoselenium";
+		int result = firstnonrepeatingcharecetr(s);
+		System.out.println(result);
+	}
+}
