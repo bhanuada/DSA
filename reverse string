@@ -1,0 +1,18 @@
+package dsa1;
+
+public class Stringreverse {
+
+	public static void main(String[] args) {
+
+		
+		String s="test1";
+	StringBuilder  sb= new StringBuilder(s);
+	
+	String s1 =sb.reverse().toString();
+	
+	System.out.println(s1);
+;
+	
+	      
+}
+}
